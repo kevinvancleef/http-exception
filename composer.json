@@ -1,0 +1,34 @@
+{
+  "name": "coolblue/http",
+  "description": "Objects for handling http, like status codes and exceptions.",
+  "prefer-stable": true,
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "repositories": [],
+  "scripts": {
+    "test": "phpunit --coverage-html coverage --coverage-text",
+    "md": "phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
+    "metrics": "phpmetrics --report-html=./metrics/index.html --config=./phpmetrics.yaml"
+  },
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8",
+    "micheh/teamcity-clover": "~0.1",
+    "squizlabs/php_codesniffer": "~2.2",
+    "phpmd/phpmd": "~2.2",
+    "sebastian/phpcpd": "~2.0.2",
+    "halleck45/phpmetrics": "~1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Coolblue\\Http\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Coolblue\\Http\\Tests\\": "tests/"
+    }
+  }
+}
